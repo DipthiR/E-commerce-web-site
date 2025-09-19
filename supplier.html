@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supplier - Update Product | ClicknShop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="supplier-body">
+
+  <div class="supplier-container">
+    <h2>Supplier Module - Update Product</h2>
+
+    <form action="SupplierServlet" method="post">
+      <label for="productId">Product ID</label>
+      <input type="text" id="productId" name="productId" placeholder="Enter Product ID" required>
+
+      <label for="productName">Product Name</label>
+      <input type="text" id="productName" name="productName" placeholder="Enter Product Name" required>
+
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" placeholder="Enter Product Price" step="0.01" required>
+
+      <label for="quantity">Available Quantity</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+
+      <label for="description">Product Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="Enter product details" required></textarea>
+
+      <button type="submit" class="btn">Update Product</button>
+    </form>
+  </div>
+
+</body>
+</html>

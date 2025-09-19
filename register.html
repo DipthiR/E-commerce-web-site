@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - ClicknShop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="login-body">
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" name="name" placeholder="Enter your Name" required>
+      <input type="email" name="email" placeholder="Enter your Email" required>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="CUSTOMER">Customer</option>
+        <option value="SUPPLIER">Supplier</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault(); // prevent page reload
+      alert("Registration Successful!");
+      window.location.href = "products.html"; // redirect to products page
+    });
+  </script>
+
+</body>
+</html>

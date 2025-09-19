@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - ClicknShop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="login-body">
+
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" name="email" placeholder="Enter your Email" required>
+      <input type="password" name="password" placeholder="Enter your Password" required>
+      
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="CUSTOMER">Customer</option>
+        <option value="SUPPLIER">Supplier</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="register.html">Register</a></p>
+  </div>
+
+  <script>
+    const users = [
+      { email: "customer@example.com", password: "1234", role: "CUSTOMER" },
+      { email: "supplier@example.com", password: "1234", role: "SUPPLIER" },
+      { email: "admin@example.com", password: "1234", role: "ADMIN" }
+    ];
+
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault(); // prevent form submission
+      const email = this.email.value;
+      const password = this.password.value;
+      const role = this.role.value;
+
+      const foundUser = users.find(u => u.email === email && u.password === password && u.role === role);
+
+      if(foundUser){
+        alert("Login Successful!");
+        window.location.href = "products.html"; // redirect to products page
+      } else {
+        alert("No login found! Please check your credentials.");
+      }
+    });
+  </script>
+
+</body>
+</html>

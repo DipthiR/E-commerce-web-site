@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback - ClicknShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Give Feedback</h2>
+        <form action="CustomerServlet" method="post">
+            <label>Rating (1-5):</label>
+            <input type="number" name="rating" min="1" max="5" required>
+            <textarea name="comments" placeholder="Write your review"></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

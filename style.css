@@ -1,0 +1,281 @@
+/* ---------------- Body & Background ---------------- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;      /* stack header, main, footer */
+    justify-content: flex-start;
+    align-items: center;
+    background: url("C:/Users/dipthi/OneDrive/Documents/projects/ClickNShop/paper-bags-different-colors-blue-background-top-view.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: rgba(0, 123, 255, 0.85);
+    padding: 15px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0 0 10px 0;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- Hero / Welcome Section ---------------- */
+.home-main {
+    flex: 1; /* fill remaining vertical space */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+}
+.hero {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    max-width: 700px;
+    width: 90%;
+}
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Button in hero */
+.hero .btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+.hero .btn:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+}
+
+/* Main Product Section */
+.product-list {
+    flex: 1; /* take remaining space to push footer down */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+    width: 100%;
+}
+
+/* Individual Product Card */
+.product-card {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px; /* smaller width for better fit */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+.product-card h3 {
+    margin: 10px 0 5px 0;
+    color: #ffcc00;
+}
+.product-card p {
+    font-size: 0.95rem;
+    margin: 3px 0;
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 120px;      /* smaller height */
+    object-fit: cover;  /* crop/fit image nicely */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.product-card img:hover {
+    transform: scale(1.05); /* subtle zoom effect */
+}
+
+/* Buy Now Button */
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.product-card button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+}
+
+/* ---------------- Login Page ---------------- */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+}
+.login-body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.form-container {
+    background: rgba(0,0,0,0.6);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-size: 2rem;
+}
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+.form-container input,
+.form-container select {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+.form-container button {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-container button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+}
+.form-container p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+.form-container p a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto; /* ensures footer stays at bottom */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 40px;
+    }
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .hero .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    .product-card {
+        width: 45%;
+    }
+    .form-container {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 20px;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    .product-card {
+        width: 90%;
+    }
+    .form-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

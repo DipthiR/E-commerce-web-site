@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - ClickNShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <div class="form-container">
+        <h3>Add Supplier</h3>
+        <form action="AdminServlet" method="post">
+            <input type="hidden" name="action" value="add">
+            <input type="text" name="name" placeholder="Supplier Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Add Supplier</button>
+        </form>
+
+        <h3>Remove Supplier</h3>
+        <form action="AdminServlet" method="post">
+            <input type="hidden" name="action" value="remove">
+            <input type="email" name="email" placeholder="Supplier Email" required>
+            <button type="submit">Remove Supplier</button>
+        </form>
+    </div>
+</body>
+</html>
